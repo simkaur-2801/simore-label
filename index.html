@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SIMORÉ — Freedom in Fashion. Explore our latest collection.">
+  <title>SIMORÉ | Freedom in Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" style="background-color:beige;">
+    <a href="#home" class="brand"><img src="images/logo.jpeg" alt="SIMORÉ logo"><span>SIMORÉ LABEL</span></a>
+    <nav class="nav">
+      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a>
+    </nav>
+    <button class="bag-btn" id="bagBtn">Bag <b id="bagCount">0</b></button>
+  </header>
+
+  <div class="announcement">SIMORÉ — FREEDOM IN FASHION</div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">THE NEW COLLECTION</p>
+        <h1>Style without<br><em>limits.</em></h1>
+        <p class="hero-text">Statement pieces designed for confidence, individuality and unforgettable moments.</p>
+        <a class="dark-btn" href="#shop">Explore collection</a>
+      </div>
+      <div class="hero-visual">
+        <img src="images/jumpsuit-front.jpeg" alt="SIMORÉ Jumpsuit">
+        <div class="hero-tag">NEW<br><span>01</span></div>
+      </div>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="section-head">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>New arrivals</h2></div>
+        <select id="filter" aria-label="Filter products">
+          <option value="all">All pieces</option><option value="jumpsuit">Jumpsuit</option><option value="skirt-top">Skirt-Tops</option>
+        </select>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="editorial">
+      <div class="editorial-image"><img src="images/gold-front.jpeg" alt="SIMORÉ embellished skirt top"></div>
+      <div class="editorial-copy"><p class="eyebrow">MADE TO BE SEEN</p><h2>Dress for the moment.</h2><p>From sculpted silhouettes to statement details, every SIMORÉ piece is made to turn an entrance into a memory.</p><a href="#shop" class="text-link">Shop the edit →</a></div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="eyebrow">ABOUT SIMORÉ LABEL</p>
+      <h2>Style without limits.</h2>
+      <p>SIMORÉ is built around effortless fashion, clean silhouettes and the freedom to wear what feels like you.</p>
+    </section>
+  </main>
+
+  <footer><img src="images/logo.jpeg" alt="SIMORÉ"><p>© 2026 SIMORÉ. Freedom in Fashion.</p></footer>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="close" data-close aria-label="Close">×</button>
+      <div class="modal-gallery">
+        <img id="mainProductImage" src="" alt="">
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <div class="modal-info"><p class="eyebrow" id="modalCategory"></p><h2 id="modalName"></h2><div class="modal-price" id="modalPrice"></div><p id="modalDescription"></p><div class="sizes"><span>Size</span><button>S</button><button>M</button><button>L</button><button>XL</button></div><button class="dark-btn full" id="modalAdd">Add to bag</button><p class="note">Front & back images are shown when available.</p></div>
+    </div>
+  </div>
+
+  <aside class="bag" id="bag">
+    <div class="bag-head"><h2>Your Bag</h2><button id="bagClose">×</button></div>
+    <div class="bag-items" id="bagItems"></div>
+    <div class="bag-bottom"><div><span>Subtotal</span><strong id="bagTotal">₹0</strong></div><button class="dark-btn full" id="whatsappBtn">Order on WhatsApp</button><small>Replace the WhatsApp number in script.js before taking real orders.</small></div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>
